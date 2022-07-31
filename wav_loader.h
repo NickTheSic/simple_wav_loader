@@ -105,6 +105,8 @@ LoadWAVFile(const char* filename, int* dataSize, short* format, short* channels,
         std::cout << filename << " was loaded successfully" << std::endl;
     }
     
+    wav.close();
+    
     if (dataSize != nullptr)
         *dataSize = LoadedWAV.dataSize;
     

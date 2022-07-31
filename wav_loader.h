@@ -58,6 +58,8 @@ static_assert(sizeof(WAVFileHeader) == 44, "We expect the wav header to be 44 by
 
 char* LoadWAVFile(const char* filename, int* dataSize = nullptr, short* format = nullptr, short* channels = nullptr, int* sampleRate = nullptr);
 
+#endif //WAV_LOADER_H
+
 #if defined NL_WAV_LOADER
 
 #include <fstream>
@@ -120,5 +122,3 @@ LoadWAVFile(const char* filename, int* dataSize, short* format, short* channels,
     return data;
 }
 #endif
-
-#endif //WAV_LOADER_H
